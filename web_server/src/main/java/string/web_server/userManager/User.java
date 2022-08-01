@@ -1,16 +1,21 @@
-package userManager;
+package string.web_server.userManager;
 
 public class User {
-    private static long id_num =0;
-
+    private static long id_num = 0;
     private String firstName;
+    //uniq userName
+    private String userName;
+
     private String lastName;
     private long idKey;
     private String emailAddress;//optional
     private String phoneNumber;
 
-    public User(String firstName, String lastName, String emailAddress, String phoneNumber) {
-        this.idKey = id_num++;
+    public long getIdKey() {
+        return idKey;
+    }
+
+    public User(String userName,String firstName, String lastName, String emailAddress, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
@@ -48,7 +53,6 @@ public class User {
     public String getFirstName() {
         return firstName;
     }
-
 
 
 //ToDo pdf resume
